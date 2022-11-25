@@ -1,11 +1,9 @@
-
 # https://leetcode.com/problems/longest-common-prefix/description/
 # learn zip, star sign before list, "".join()
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         prefix = []
-        num = len(strs)
         for x in zip(*strs):
             if len(set(x)) == 1:
                 prefix.append(x[0])
@@ -13,7 +11,7 @@ class Solution:
                 break
         return "".join(prefix)
 
-# # mine
+# mine
 
 
 class Solution:
@@ -28,7 +26,3 @@ class Solution:
                     res = res[:j]
 
         return res
-
-
-for val in zip('ab', 'aa'):
-    print(val)
